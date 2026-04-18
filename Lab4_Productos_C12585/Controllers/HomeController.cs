@@ -1,4 +1,4 @@
-using System.Diagnostics;
+// Controllers/HomeController.cs
 using Lab4_Productos_C12585.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -6,20 +6,8 @@ namespace Lab4_Productos_C12585.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
-        {
-            return View();
-        }
+        public IActionResult Index() => View();
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
+        public IActionResult Error() => View();
     }
 }
